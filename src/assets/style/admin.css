@@ -1,0 +1,610 @@
+:root {
+    --first-color: #53739C;
+    --first-color-eight: #53739c14;
+    --first-color-forte: #53739c66;
+    --first-color-sevente: #53739cb3;
+    --second-color: #A46448;
+    --third-color: #666666;
+    --forth-color: #444444;
+    --fifth-color: #222222;
+    --sixth-color: #F06060;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* classes used in all design admin  */
+.icon-admin-style {
+    color: var(--first-color);
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.background-gradient-admin {
+    width: 400px;
+    height: 100vh;
+    background: linear-gradient(to right, #53739c0a, #53739c2c);
+    position: fixed;
+    top: 0;
+    right: 250px;
+    z-index: -1;
+}
+
+.container-admin {
+    margin: 30px 300px 0 0;
+    width: 75%;
+    height: 100vh;
+}
+
+@media (max-width:992px) {
+    .container-admin {
+        margin: 30px 280px 0 0;
+        width: 65%;
+        height: 100vh;
+    }
+}
+
+@media (max-width:767px) {
+    .background-gradient-admin {
+        width: 150px;
+        min-height: 100%;
+        background: linear-gradient(to right, #53739c0a, #53739c2c);
+        position: absolute;
+        top: 0;
+        right: 70px;
+        z-index: -1;
+    }
+
+    .container-admin {
+        margin: 10px 80px 0 0;
+        width: 75%;
+        height: 100vh;
+    }
+}
+
+
+/* sidebar section style  */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 28px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    width: 250px;
+    background-color: white;
+}
+
+.sidebar .head-sidebar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    margin-bottom: 40px;
+}
+.sidebar .head-sidebar .link-head {
+    display: flex;
+    text-decoration: none;
+}
+.sidebar .head-sidebar .link-head img {
+    width: 80px;
+    height: 100px;
+}
+
+.sidebar .head-sidebar .link-head h3 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 47px;
+    text-transform: uppercase;
+    color: var(--first-color);
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar .active-page {
+    border-top: 2px solid var(--first-color);
+    border-right: 1px solid var(--first-color-forte);
+    border-left: 1px solid var(--first-color-forte);
+    border-radius: 8px;
+    color: var(--first-color);
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar {
+    text-decoration: none;
+    color: var(--fifth-color);
+    transition: ease-in-out 0.3s;
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar li {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    margin-right: 20px;
+    display: flex;
+    color: var(--fifth-color);
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar:last-child li {
+    color: red;
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar li p {
+    margin-top: -4px;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.sidebar .list-sidebar ul .link-list-sidebar:hover li p,
+.sidebar .list-sidebar ul .link-list-sidebar:hover .icon-list-sidebar {
+    color: var(--first-color);
+}
+
+.sidebar .list-sidebar ul li .icon-list-sidebar {
+    margin-left: 20px;
+    transition: ease-in-out 0.3s;
+}
+
+@media (max-width:767px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar .head-sidebar .link-head h3 {
+        display: none;
+    }
+
+    .sidebar .list-sidebar ul .link-list-sidebar li p {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* manage-courses style section  */
+
+.manage-courses {
+    width: 100%;
+
+}
+
+.manage-courses .head-manage-courses {
+    width: 100%;
+}
+
+.manage-courses .head-manage-courses>p {
+    color: var(--third-color);
+}
+
+.manage-courses .head-manage-courses>p>span {
+    color: var(--first-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.manage-courses .head-manage-courses>h3 {
+    font-weight: bold;
+    color: var(--first-color);
+    margin-bottom: 20px;
+}
+
+.manage-courses .head-manage-courses .action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    background-color: white;
+    height: 50px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.manage-courses .head-manage-courses .action-bar>button {
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.manage-courses .head-manage-courses .action-bar>button:hover {
+    background-color: var(--first-color-eight);
+}
+
+@media (max-width:767px) {
+    .manage-courses .head-manage-courses .action-bar>button {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+
+.manage-courses .head-manage-courses .action-bar .search-action-bar {
+    width: 40%;
+    position: relative;
+}
+
+
+.manage-courses .head-manage-courses .action-bar .search-action-bar>button {
+    border: none;
+    background-color: var(--first-color-eight);
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: ease-in-out 0.3s;
+}
+
+.manage-courses .head-manage-courses .action-bar .search-action-bar>button:hover {
+    background-color: var(--first-color-forte);
+}
+
+.manage-courses .head-manage-courses .action-bar .search-action-bar>input {
+    padding: 5px;
+    padding-right: 50px;
+    width: 100%;
+    background-color: var(--first-color-eight);
+    border-radius: 50px;
+    border: none;
+}
+
+.manage-courses .head-manage-courses .action-bar .search-action-bar>input:focus {
+    outline: none;
+}
+
+.chapters .chapter {
+    position: relative;
+}
+
+.chapters .chapter>span {
+    font-weight: bold;
+    color: var(--third-color);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+
+
+/* lectures section style  */
+
+.manage-courses.lectures {
+    height: 200px;
+}
+
+.lectures .lec-head>button {
+    background-color: inherit;
+    border: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: ease-in-out 0.3s;
+    padding: 10px;
+}
+
+.lectures .lec-head>button:hover {
+    background-color: var(--first-color-eight);
+}
+
+
+
+.manage-courses .list-video-lec {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    margin: -100px 0 0 0;
+}
+
+.manage-courses .list-video-lec .head-list-video-lec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.manage-courses .list-video-lec .head-list-video-lec>h3 {
+    font-weight: bold;
+    color: var(--third-color);
+}
+
+.manage-courses .list-video-lec .head-list-video-lec .icon-head-list-video-lec {
+    font-weight: bold;
+    color: var(--first-color);
+    background-color: var(--first-color-eight);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.manage-courses .list-video-lec .content-list-video-lec {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.manage-courses .list-video-lec .content-list-video-lec>input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--first-color-eight);
+    font-weight: bold;
+}
+
+.manage-courses .list-video-lec .content-list-video-lec>input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--first-color);
+}
+
+.manage-courses .list-video-lec .content-list-video-lec .icons-action-list,
+table tbody tr td .icons-action-list {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+
+.manage-courses .list-video-lec .content-list-video-lec .icons-action-list .first-icon-action,
+table tbody tr td .icons-action-list .first-icon-action {
+    color: red;
+    cursor: pointer;
+}
+
+.manage-courses .list-video-lec .content-list-video-lec .icons-action-list .second-icon-action,
+.manage-courses .list-video-lec .content-list-video-lec .icons-action-list .third-icon-action,
+table tbody tr td .icons-action-list .second-icon-action,
+table tbody tr td .icons-action-list .third-icon-action {
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* students section style  */
+.students {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.students .head-students-table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    background-color: inherit;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.students .head-students-table .search-action-bar {
+    width: 40%;
+    position: relative;
+}
+
+
+.students .head-students-table .search-action-bar>button {
+    border: none;
+    background-color: var(--first-color-eight);
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: ease-in-out 0.3s;
+}
+
+.students .head-students-table .search-action-bar>button:hover {
+    background-color: var(--first-color-forte);
+}
+
+.students .head-students-table .search-action-bar>input {
+    padding: 5px;
+    padding-right: 50px;
+    width: 100%;
+    background-color: var(--first-color-eight);
+    border-radius: 50px;
+    border: none;
+}
+
+.students .head-students-table .search-action-bar>input:focus {
+    outline: none;
+}
+
+.students table {
+    width: 100%;
+}
+
+.students table tbody {
+    margin-top: 50px;
+}
+
+.students table thead tr th {
+    background-color: var(--first-color-eight);
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid var(--first-color-forte);
+    font-size: 13px;
+    color: black;
+}
+
+.students table thead tr th:first-child {
+    width: 80px;
+}
+
+.students table tbody tr td:first-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--first-color);
+}
+
+.students table tbody tr td {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    position: relative;
+    border-bottom: 2px solid var(--first-color-eight);
+}
+
+.students table tbody tr td:nth-child(5)>span {
+    background-color: rgba(1, 255, 1, 0.198);
+    padding: 2px 5px;
+    border-radius: 8px;
+    color: rgb(1, 222, 1);
+}
+
+
+
+/* popup section style  */
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #020202a5;
+    z-index: 100;
+}
+
+.popup .content-popup {
+    width: 50%;
+    background-color: white;
+    border-radius: 8px;
+    margin: 60px auto;
+    padding: 10px;
+}
+
+.popup .content-popup .icon-popup-closed {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .content-popup>h4 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    margin: 10px;
+}
+
+.popup .content-popup form>input {
+    width: 90%;
+    display: block;
+    background-color: var(--first-color-forte);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+}
+
+.popup .content-popup form>input:nth-child(6) {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.popup .content-popup form>label {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.popup .content-popup form>input:nth-last-child(2) {
+    background-color: red;
+}
+
+.popup .content-popup form>input:last-child {
+    margin: 50px auto 20px;
+    background-color: var(--first-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.popup .content-popup form>input:last-child:hover {
+    opacity: 0.8;
+}
+
+.popup .content-popup form .input-img {
+    width: 100%;
+}
+
+.popup .content-popup form .input-img>label {
+    background-color: #eee;
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed black;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.popup .content-popup form .input-img>label:hover {
+    background-color: var(--first-color-eight);
+}
+
+.popup .content-popup form .input-img>label .icon-upload-img {
+    margin-right: 20px;
+    color: var(--first-color);
+    font-size: 20px;
+    
+}
+
+@media (max-width:992px) {
+    .popup .content-popup {
+        width: 70%;
+    }
+}
+
+@media (max-width:767px) {
+    .popup .content-popup {
+        width: 80%;
+    }
+}
