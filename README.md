@@ -1,3 +1,10 @@
+# This Project Was a Educational platform For 
+## zaid alwash , he was a teacher of physics 
+  this platform was a full website to design and functionality work , now it is just a design.
+
+
+_______________________________________________________________________________________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
